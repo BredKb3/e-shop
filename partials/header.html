@@ -1,0 +1,57 @@
+<!-- ====================== ШАПКА САЙТА (header.html) ====================== -->
+<header class="header">
+    <div class="header__container">
+        
+        <!-- Левая часть: Логотип + название -->
+        <div class="header__left">
+            <a href="index.html" class="logo">
+                <div class="logo__icon">T</div>
+                <span class="logo__text">TechStore</span>
+            </a>
+        </div>
+
+        <!-- Навигация (десктопная) -->
+        <nav class="header__nav">
+            <a href="index.html" class="nav__link">Products</a>
+            <a href="categories.html" class="nav__link">Categories</a>
+            <a href="deals.html" class="nav__link">Deals</a>
+            <a href="about.html" class="nav__link">About</a>
+        </nav>
+
+        <!-- Правая часть: поиск, корзина, бургер -->
+        <div class="header__right">
+            
+            <button class="header__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+            </button>
+            <a href="cart.html" class="header__icon header__cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle>
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                </svg>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </a>
+            <button class="header__burger" id="burgerBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Мобильное меню (появляется при клике на бургер) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link">Products</a>
+            <a href="categories.html" class="mobile-menu__link">Categories</a>
+            <a href="deals.html" class="mobile-menu__link">Deals</a>
+            <a href="about.html" class="mobile-menu__link">About</a>
+        </nav>
+    </div>
+</header>
+
+
