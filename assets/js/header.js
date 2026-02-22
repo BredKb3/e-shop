@@ -1,5 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    
+function waitForElement(selector, callback) {
+    if (document.querySelector(selector)) {
+        callback();
+    } else {
+        setTimeout(function() {
+            waitForElement(selector, callback);
+        }, 100);
+    }
+}
+
+waitForElement('#burgerBtn', function() {    
     const burgerBtn = document.getElementById('burgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     
@@ -24,25 +33,28 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
+});
+
+waitForElement('#cartBadge', function() {
     const cartBadge = document.getElementById('cartBadge');
-    
     function updateCartCounter() {
         const cart = localStorage.getItem('cart');
+        
         if (cart && cartBadge) {
             const cartItems = JSON.parse(cart);
             let totalCount = 0;
+            
             for (let i = 0; i < cartItems.length; i++) {
                 totalCount += cartItems[i].quantity || 1;
             }
-            cartBadge.textContent = totalCount;
+            
             if (totalCount === 0) {
                 cartBadge.style.display = 'none';
             } else {
                 cartBadge.style.display = 'flex';
+                cartBadge.textContent = totalCount;
             }
         } else if (cartBadge) {
-            cartBadge.textContent = '0';
             cartBadge.style.display = 'none';
         }
     }
@@ -50,4 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartCounter();
     
     window.addEventListener('cartUpdated', updateCartCounter);
+    
+    setInterval(updateCartCounter, 1000);
 });
