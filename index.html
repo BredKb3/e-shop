@@ -4,36 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce Website Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/catalog.css">
 </head>
 <body>
-    
     <div id="header-placeholder"></div>
-    <main>
-        
+    <main class="catalog">
+        <div class="catalog__container">
+            <div class="catalog__header">
+                <h1 class="catalog__title">Premium Electronics</h1>
+                <p class="catalog__subtitle">Discover our curated collection of high-quality tech products</p>
+            </div>
+            <div class="catalog__controls">
+                <div class="catalog__controls_left">
+                    <button class="catalog__filter-btn" id="filterBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="21" x2="14" y1="4" y2="4"></line>
+                            <line x1="10" x2="3" y1="4" y2="4"></line>
+                            <line x1="21" x2="12" y1="12" y2="12"></line>
+                            <line x1="8" x2="3" y1="12" y2="12"></line>
+                            <line x1="21" x2="16" y1="20" y2="20"></line>
+                            <line x1="12" x2="3" y1="20" y2="20"></line>
+                            <line x1="14" x2="14" y1="2" y2="6"></line>
+                            <line x1="8" x2="8" y1="10" y2="14"></line>
+                            <line x1="16" x2="16" y1="18" y2="22"></line>
+                        </svg>
+                        Filters
+                    </button>
+                    <span class="catalog__count" id="productCount">6 products</span>
+                </div>
+                <div class="filter-overlay" id="filterOverlay"></div>
+                <div class="filter-drawer" id="filterDrawer">
+                    <div class="filter-drawer__header">
+                        <h2 class="filter-drawer__title">Filters</h2>
+                        <button class="filter-drawer__close" id="closeFilterBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 6 6 18"></path>
+                                <path d="m6 6 12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="filter-drawer__content">
+                        <div class="filters__content">
+                            <div class="filter__section">
+                                <h3 class="filter__title">Rating</h3>
+                                <div class="filter__options">
+                                    <label class="filter__option">
+                                        <input type="checkbox" class="filter__checkbox" data-filter="ratingDrawer" value="5">
+                                        <span class="filter__checkmark"></span>
+                                        <span>5+ Stars</span>
+                                    </label>
+                                    <label class="filter__option">
+                                        <input type="checkbox" class="filter__checkbox" data-filter="ratingDrawer" value="4">
+                                        <span class="filter__checkmark"></span>
+                                        <span>4+ Stars</span>
+                                    </label>
+                                    <label class="filter__option">
+                                        <input type="checkbox" class="filter__checkbox" data-filter="ratingDrawer" value="3">
+                                        <span class="filter__checkmark"></span>
+                                        <span>3+ Stars</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter__section">
+                                <h3 class="filter__title">Price Range</h3>
+                                <div class="price-range">
+                                    <div class="price-range__slider" id="priceRangeSliderDrawer">
+                                        <div class="price-range__track"></div>
+                                        <div class="price-range__fill" id="priceFillDrawer"></div>
+                                        <input type="range" class="price-range__input price-range__input--min"
+                                            id="minRangeDrawer" min="0" max="3000" value="0" step="10">
+                                        <input type="range" class="price-range__input price-range__input--max"
+                                            id="maxRangeDrawer" min="0" max="3000" value="3000" step="10">
+                                    </div>
+                                    <div class="price-range__values">
+                                        <span>$<span id="minPriceDrawer">0</span></span>
+                                        <span>$<span id="maxPriceDrawer">3000</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="filter__clear" id="clearFiltersDrawer">Clear All Filters</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sort__dropdown">
+                    <span class="sort__label">Sort by:</span>
+                    <div class="dropdown" id="sortDropdown">
+                        <button class="dropdown__button" id="dropdownBtn">
+                            <span id="selectedSort">Name (A-Z)</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a0a0a0"
+                                stroke-width="2">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="dropdown__menu" id="dropdownMenu">
+                            <button class="dropdown__item selected" data-sort="name-asc">Name (A-Z)<svg width="16"
+                                    height="16" viewBox="0 0 24 24">
+                                    <use href="#check-icon"></use>
+                                </svg></button>
+                            <button class="dropdown__item" data-sort="price-asc">Price (Low to High)</button>
+                            <button class="dropdown__item" data-sort="price-desc">Price (High to Low)</button>
+                        </div>
+                        <svg style="display: none;">
+                            <symbol id="check-icon" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </symbol>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__content">
+                <aside class="catalog__sidebar" id="sidebar">
+                    <div class="sidebar__inner">
+                        <h2 class="sidebar__title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="21" x2="14" y1="4" y2="4"></line>
+                                <line x1="10" x2="3" y1="4" y2="4"></line>
+                                <line x1="21" x2="12" y1="12" y2="12"></line>
+                                <line x1="8" x2="3" y1="12" y2="12"></line>
+                                <line x1="21" x2="16" y1="20" y2="20"></line>
+                                <line x1="12" x2="3" y1="20" y2="20"></line>
+                                <line x1="14" x2="14" y1="2" y2="6"></line>
+                                <line x1="8" x2="8" y1="10" y2="14"></line>
+                                <line x1="16" x2="16" y1="18" y2="22"></line>
+                            </svg>
+                            Filters
+                        </h2>
+                        <div class="filters__content">
+                            <div class="filter__section">
+                                <h3 class="filter__title">Rating</h3>
+                                <div class="filter__options">
+                                    <label class="filter__option">
+                                        <input type="checkbox" class="filter__checkbox" data-filter="rating" value="5">
+                                        <span class="filter__checkmark"></span>
+                                        <span>5+ Stars</span>
+                                    </label>
+                                    <label class="filter__option">
+                                        <input type="checkbox" class="filter__checkbox" data-filter="rating" value="4">
+                                        <span class="filter__checkmark"></span>
+                                        <span>4+ Stars</span>
+                                    </label>
+                                    <label class="filter__option">
+                                        <input type="checkbox" class="filter__checkbox" data-filter="rating" value="3">
+                                        <span class="filter__checkmark"></span>
+                                        <span>3+ Stars</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter__section">
+                                <h3 class="filter__title">Price Range</h3>
+                                <div class="price-range">
+                                    <div class="price-range__slider" id="priceRangeSlider">
+                                        <div class="price-range__track"></div>
+                                        <div class="price-range__fill" id="priceFill"></div>
+                                        <input type="range" class="price-range__input price-range__input--min"
+                                            id="minRange" min="0" max="3000" value="0" step="10">
+                                        <input type="range" class="price-range__input price-range__input--max"
+                                            id="maxRange" min="0" max="3000" value="3000" step="10">
+                                    </div>
+                                    <div class="price-range__values">
+                                        <span>$<span id="minPrice">0</span></span>
+                                        <span>$<span id="maxPrice">3000</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="filter__clear" id="clearFilters">Clear All Filters</button>
+                        </div>
+                    </div>
+                </aside>
+                <div class="catalog__grid" id="productsGrid">
+                </div>
+            </div>
+        </div>
     </main>
 
     <div id="footer-placeholder"></div>
 
-<script>
+    <script>
         fetch('partials/header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
             });
-            
+
         fetch('partials/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
-</script>
-
-<script src="assets/js/header.js"></script>
-
-
+    </script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/catalog.js"></script>
 </body>
 </html>
