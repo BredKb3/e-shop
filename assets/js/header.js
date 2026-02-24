@@ -13,24 +13,32 @@ waitForElement('#burgerBtn', function() {
     const mobileMenu = document.getElementById('mobileMenu');
     
     if (burgerBtn && mobileMenu) {
+        function openMenu() {
+            mobileMenu.classList.add('active');
+            burgerBtn.classList.add('active');
+            requestAnimationFrame(function() {
+                const menuHeight = mobileMenu.offsetHeight;
+                document.body.style.paddingTop = (64 + menuHeight) + 'px';
+            });
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            burgerBtn.classList.remove('active');
+            document.body.style.paddingTop = '64px';
+        }
+
         burgerBtn.addEventListener('click', function() {
-            burgerBtn.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            
             if (mobileMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
+                closeMenu();
             } else {
-                document.body.style.overflow = '';
+                openMenu();
             }
         });
         
         const mobileLinks = document.querySelectorAll('.mobile-menu__link');
         mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                burgerBtn.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
         });
     }
 });

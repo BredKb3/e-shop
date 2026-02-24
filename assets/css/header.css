@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    padding-top: 64px;
 }
 
 :root {
@@ -18,13 +19,15 @@ body {
     --border: #e5e7eb;
     --bg-white: #ffffff;
     --bg-gray: #f9fafb;
-    --shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    --shadow:  0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    z-index: 999;
     background-color: var(--bg-white);
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow);
@@ -109,13 +112,11 @@ body {
     color: var(--primary);
 }
 
-
 .header__right {
     display: flex;
     align-items: center;
     gap: 16px; 
 }
-
 
 .header__icon {
     position: relative;
@@ -164,7 +165,6 @@ body {
     padding: 0 3px;
 }
 
-
 .header__burger {
     width: 32px; 
     height: 32px; 
@@ -177,7 +177,6 @@ body {
     border-radius: 50%;
 }
 
-
 .header__burger svg {
     width: 20px;  
     height: 20px; 
@@ -188,24 +187,29 @@ body {
     background-color: var(--bg-gray);
 }
 
-
 @media (min-width: 768px) {
     .header__burger {
         display: none;
     }
 }
 
-
+/* ─── Mobile menu: в потоке внутри .header, растягивает fixed-блок ─── */
 .mobile-menu {
     display: none;
     background-color: var(--bg-white);
-    border-top: 1px solid var(--border);
     padding: 16px;
+    width: 100%;
+    position: relative;
+}
+
+.mobile-menu::before {
+    content: '';
     position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    box-shadow: var(--shadow);
+    top: 0;
+    left: 14px;
+    right: 14px;
+    height: 1px;
+    background-color: var(--border);
 }
 
 .mobile-menu.active {
