@@ -19,7 +19,7 @@ let allProducts = [];
 let filteredProducts = [];
 
 let currentFilters = {
-    rating: null,
+    rating: [],
     minPrice: 0,
     maxPrice: 3000,
     sort: 'name-asc'
@@ -45,7 +45,7 @@ function syncUIFromFilters() {
     priceFillDrawer.style.cssText = fillStyle;
 
     document.querySelectorAll('[data-filter="rating"], [data-filter="ratingDrawer"]').forEach(cb => {
-        cb.checked = rating !== null && Number(cb.value) === rating;
+        cb.checked = rating.includes(Number(cb.value));
     });
 }
 
@@ -177,8 +177,8 @@ function applyFilters() {
         p.price <= currentFilters.maxPrice
     );
 
-    if (currentFilters.rating) {
-        filtered = filtered.filter(p => p.rating >= currentFilters.rating);
+    if (currentFilters.rating.length > 0) {
+        filtered = filtered.filter(p => currentFilters.rating.some(r => p.rating >= r));
     }
 
     switch (currentFilters.sort) {
@@ -253,11 +253,11 @@ function handleRatingChange(changedCheckbox) {
     const value = Number(changedCheckbox.value);
 
     if (changedCheckbox.checked) {
-        currentFilters.rating = value;
-    } else {
-        if (currentFilters.rating === value) {
-            currentFilters.rating = null;
+        if (!currentFilters.rating.includes(value)) {
+            currentFilters.rating.push(value);
         }
+    } else {
+        currentFilters.rating = currentFilters.rating.filter(r => r !== value);
     }
     syncUIFromFilters();
     applyFilters();
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.clearAllFilters = function () {
     currentFilters = {
-        rating: null,
+        rating: [],
         minPrice: 0,
         maxPrice: 3000,
         sort: 'name-asc'

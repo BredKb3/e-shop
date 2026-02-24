@@ -391,7 +391,7 @@
 }
 
 .product-card__content a {
-    text-decoration: none;  /* убирает подчеркивание */
+    text-decoration: none;
 }
 
 .product-card__title {
