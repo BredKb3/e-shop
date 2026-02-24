@@ -69,7 +69,7 @@ function setupAddToCartButtons() {
     const buttons = document.querySelectorAll('.product-card__add-to-cart');
     buttons.forEach(button => {
         button.addEventListener('click', function(e) {
-            e.preventDefault(); // Останавливаем переход по ссылке
+            e.preventDefault();
             const productId = this.getAttribute('data-product-id');
             addToCart(Number(productId), 1);
         });
@@ -120,11 +120,8 @@ function displayProducts() {
 }
 
 window.addToCart = function(productId, quantity = 1) {
-    // Получаем текущую корзину
     let cart = localStorage.getItem('cart');
     cart = cart ? JSON.parse(cart) : [];
-    
-    // Ищем товар в корзине
     let found = false;
     for (let i = 0; i < cart.length; i++) {
         if (cart[i].id === productId) {
@@ -133,19 +130,13 @@ window.addToCart = function(productId, quantity = 1) {
             break;
         }
     }
-    
-    // Если товара нет - добавляем новый
     if (!found) {
         cart.push({
             id: productId,
             quantity: quantity
         });
     }
-    
-    // Сохраняем в localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-    
-    // Отправляем событие для обновления бейджа в хедере
     window.dispatchEvent(new Event('cartUpdated'));
 }
 
@@ -328,7 +319,7 @@ function getSnappedTrackValue(e, trackEl) {
     const rect = trackEl.getBoundingClientRect();
     const percent = ((e.clientX - rect.left) / rect.width) * 100;
     const raw = (percent / 100) * 3000;
-    return Math.round(raw / 10) * 10; // кратно 10
+    return Math.round(raw / 10) * 10;
 }
 
 sliderTrack.addEventListener('click', function (e) {
