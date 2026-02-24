@@ -7,7 +7,7 @@
       "rating": 4.5,
       "reviews": 327,
       "category": "Audio",
-      "images": ["https://images.unsplash.com/photo-1674303324806-7018a739ed11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibHVldG9vdGglMjBzcGVha2VyJTIwcG9ydGFibGV8ZW58MXx8fHwxNzcxMTE2NTg4fDA&ixlib=rb-4.1.0&q=80&w=1080"],
+      "images": ["images\\1.jpg"],
       "description": "Take your music anywhere with this powerful portable speaker. Delivers rich, immersive sound with deep bass. Waterproof design perfect for outdoor adventures and pool parties.",
       "specifications": {
         "Output Power": "20W",
@@ -25,7 +25,7 @@
       "rating": 4.5,
       "reviews": 327,
       "category": "Audio",
-      "images": ["https://images.unsplash.com/photo-1760708368699-69cb9ed56f52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3aXJlbGVzcyUyMGhlYWRwaG9uZXMlMjBibGFja3xlbnwxfHx8fDE3NzExODE4OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"],
+      "images": ["images\\2.jpg"],
       "description": "Experience immersive audio with our premium wireless headphones. Featuring advanced noise cancellation, 40-hour battery life, and studio-quality sound. Perfect for music enthusiasts and professionals who demand the best audio experience.",
       "specifications": {
         "Battery Life": "40 hours",
@@ -43,7 +43,7 @@
       "rating": 4.5,
       "reviews": 327,
       "category": "Photography",
-      "images": ["https://images.unsplash.com/photo-1532272278764-53cd1fe53f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYW1lcmElMjBwaG90b2dyYXBoeSUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzExNDIxODN8MA&ixlib=rb-4.1.0&q=80&w=1080"],
+      "images": ["images\\3.jpg"],
       "description": "Capture stunning images with this professional-grade DSLR camera. Features a full-frame sensor, 4K video recording, and exceptional low-light performance. Perfect for serious photographers and videographers.",
       "specifications": {
         "Sensor": "45MP Full-Frame",
@@ -61,7 +61,7 @@
       "rating": 4.5,
       "reviews": 327,
       "category": "Computers",
-      "images": ["https://images.unsplash.com/photo-1673431738089-c4fc9c2e96a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBjb21wdXRlciUyMGRlc2slMjBzZXR1cHxlbnwxfHx8fDE3NzExODE4OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"],
+      "images": ["images\\4.jpg"],
       "description": "Powerful performance meets sleek design in this professional laptop. Equipped with the latest processor, stunning display, and all-day battery life. Ideal for creative professionals and power users.",
       "specifications": {
         "Processor": "Intel Core i9",
@@ -79,7 +79,7 @@
       "rating": 4.5,
       "reviews": 327,
       "category": "Wearables",
-      "images": ["https://images.unsplash.com/photo-1665860455418-017fa50d29bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydHdhdGNoJTIwZml0bmVzcyUyMHRyYWNrZXJ8ZW58MXx8fHwxNzcxMTUyOTc0fDA&ixlib=rb-4.1.0&q=80&w=1080"],
+      "images": ["images\\5.jpg"],
       "description": "Track your fitness goals with precision and style. Features advanced health monitoring, GPS tracking, and a vibrant always-on display. Water-resistant and built for active lifestyles.",
       "specifications": {
         "Display": "1.9\" AMOLED",
@@ -97,7 +97,7 @@
       "rating": 4.5,
       "reviews": 327,
       "category": "Tablets",
-      "images": ["https://images.unsplash.com/photo-1740637977676-c8040b41dc7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YWJsZXQlMjBkZXZpY2UlMjBzY3JlZW58ZW58MXx8fHwxNzcxMTEwNDQ2fDA&ixlib=rb-4.1.0&q=80&w=1080"],
+      "images": ["images\\6.jpg"],
       "description": "Experience productivity and entertainment on a stunning display. This ultra-thin tablet features powerful performance, all-day battery, and support for stylus input. Perfect for work and play.",
       "specifications": {
         "Display": "12.9\" Liquid Retina",
