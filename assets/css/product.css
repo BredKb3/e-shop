@@ -2,6 +2,7 @@
     background-color: var(--bg-gray);
     min-height: 100vh;
     padding: 32px 0 64px;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .product-page__container {
@@ -26,7 +27,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-secondary);
     flex-wrap: wrap;
 }
@@ -152,20 +153,21 @@
 .product__info {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 24px;
 }
 
 .product__meta {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
 }
 
 .product__name {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     color: var(--text-primary);
     line-height: 1.2;
+    margin-bottom: 8px;
 }
 
 .product__rating-row {
@@ -199,8 +201,9 @@
 }
 
 .product__reviews {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-secondary);
+    margin-bottom: 8px;
 }
 
 
@@ -211,13 +214,13 @@
 }
 
 .product__price {
-    font-size: 28px;
-    font-weight: 800;
+    font-size: 30px;
+    font-weight: 700;
     color: var(--primary);
 }
 
 .product__shipping {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-secondary);
 }
 
@@ -228,7 +231,7 @@
 }
 
 .product__highlights-title {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 10px;
@@ -246,7 +249,7 @@
     align-items: center;
     gap: 8px;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-primary);
 }
 
@@ -260,14 +263,14 @@
 }
 
 .product__section-title {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     color: var(--text-primary);
     margin-bottom: 12px;
 }
 
 .product__description p {
-    font-size: 15px;
+    font-size: 16px;
     color: #374151;
     line-height: 1.7;
 }
@@ -275,13 +278,13 @@
 .product__actions {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 22px;
 }
 
 .product__quantity {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
 }
 
 .product__qty-label {
@@ -299,8 +302,8 @@
 .product__qty-btn {
     width: 40px;
     height: 40px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
+    border-radius: 10px;
+    border: 1px solid #d6d4d4;
     background: var(--bg-gray);
     font-size: 12px;
     line-height: 1;
@@ -334,7 +337,7 @@
     border: none;
     background: var(--primary);
     color: #ffffff;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     height: 56px;
@@ -360,7 +363,7 @@
     padding: 16px;
     background: none;
     border: none;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-primary);
     text-align: left;
@@ -401,7 +404,11 @@
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid var(--border);
-    font-size: 13px;
+    font-size: 14px;
+}
+
+.product__spec-row:first-child{
+    padding-top: 0px;
 }
 
 .product__spec-row:last-child {
@@ -422,7 +429,7 @@
 }
 
 .product__related-title {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 24px;
