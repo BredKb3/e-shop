@@ -14,7 +14,7 @@ function renderCategories(categories) {
 
         const card = document.createElement('a');
         card.classList.add('category-card');
-        card.href = `index.html?category=${encodeURIComponent(cat.name)}`;
+        card.href = `index.html`;
 
         card.innerHTML = `
             <img src="${cat.image}" alt="${cat.name}" />
