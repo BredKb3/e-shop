@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Deals - E-Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/deals.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="deals-main">
+        <div class="deals-container">
+
+            <div class="deals-header">
+                <div class="deals-title-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="deals-icon">
+                        <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path>
+                        <circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                    </svg>
+                    <h1>Special Deals</h1>
+                </div>
+                <p class="deals-subtitle">Limited time offers on our best products - Don't miss out!</p>
+            </div>
+
+            <div class="deals-banner">
+                <div class="deals-banner-left">
+                    <h2>Flash Sale Event</h2>
+                    <p>Save up to 30% on selected items</p>
+                </div>
+                <div class="deals-banner-timer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>Ends in 2 days</span>
+                </div>
+            </div>
+
+            <div class="deals-grid" id="deals-grid">
+            </div>
+
+            <div class="deals-footer">
+                <p>Want to see more products?</p>
+                <a href="index.html" class="deals-browse-btn">Browse All Products</a>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('partials/header.html')
+            .then(r => r.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+        fetch('partials/footer.html')
+            .then(r => r.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/deals.js"></script>
+
+</body>
+</html>
