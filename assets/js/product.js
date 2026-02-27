@@ -85,8 +85,6 @@ function initAccordion() {
 
 
 function renderProduct(product) {
-    document.title = `${product.name} — TechStore`;
-
     document.getElementById('breadcrumbCategory').textContent = product.category;
     document.getElementById('breadcrumbName').textContent = product.name;
 
