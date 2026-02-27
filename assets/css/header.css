@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +5,6 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     padding-top: 64px;
 }
 
@@ -15,7 +12,7 @@ body {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
     --text-primary: #1f2937;
-    --text-secondary: #6b7280;
+    --text-secondary: #3f4145;
     --border: #e5e7eb;
     --bg-white: #ffffff;
     --bg-gray: #f9fafb;
@@ -77,8 +74,8 @@ body {
 }
 
 .logo__text {
-    font-weight: 1000;
-    font-size: 19px;
+    font-weight: 750;
+    font-size: 20px;
     color: var(--text-primary);
 }
 
@@ -104,7 +101,7 @@ body {
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 440;
-    font-size: 15px;
+    font-size: 16px;
     transition: color 0.2s;
 }
 
@@ -150,14 +147,14 @@ body {
 
 .cart-badge {
     position: absolute;
-    top: -2px; 
-    right: -2px; 
-    min-width: 14px; 
-    height: 14px; 
+    top: -8px; 
+    right: -8px; 
+    min-width: 20px; 
+    height: 20px; 
     background-color: var(--primary);
     color: white;
-    font-size: 8px; 
-    font-weight: 600;
+    font-size: 11px; 
+    font-weight: 500;
     border-radius: 999px;
     display: flex;
     align-items: center;
@@ -193,7 +190,6 @@ body {
     }
 }
 
-/* ─── Mobile menu: в потоке внутри .header, растягивает fixed-блок ─── */
 .mobile-menu {
     display: none;
     background-color: var(--bg-white);

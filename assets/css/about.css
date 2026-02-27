@@ -2,7 +2,7 @@
     background-color: #f9fafb;
     min-height: 100vh;
     padding: 2px 0;
-    padding-top: 32px;
+    padding-top: 34px;
 }
 
 .about__container {
@@ -25,39 +25,37 @@
 .about__title {
     font-size: 24px;
     font-weight: 500;
-    color: #1f2937;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 
 .about__subtitle {
-    font-size: 17px;
-    color: #6b7280;
+    font-size: 18px;
+    color: #484b51;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
-    margin-bottom: 54px;
+    margin-bottom: 50px;
 }
 
 .about__card {
     background-color: white;
     border: 1px solid #e5e7eb;
-    border-radius: 8px;
+    border-radius: 9px;
     padding: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .about__card-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 24px;
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 18px;
 }
 
 .about__text {
-    color: #4b5563;
-    line-height: 1.7;
-    font-size: 15px;
+    color: #3a3b3d;
+    line-height: 1.5;
+    font-size: 16px;
 }
 
 .about__text p {
@@ -69,9 +67,8 @@
 }
 
 .about__section-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1f2937;
+    font-size: 20px;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 26px;
 }
@@ -81,7 +78,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 44px;
 }
 
 @media (min-width: 768px) {
@@ -117,15 +114,14 @@
 }
 
 .value__title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    color: #1f2937;
     margin-bottom: 12px;
 }
 
 .value__text {
-    font-size: 13px;
-    color: #6b7280;
+    font-size: 14px;
+    color: #4e5055;
     line-height: 1.6;
 }
 
@@ -169,15 +165,14 @@
 }
 
 .contact__title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    color: #1f2937;
     margin-bottom: 4px;
 }
 
 .contact__text {
     font-size: 14px;
-    color: #6b7280;
+    color: #4e5055;
     line-height: 1.5;
     margin-bottom: 2px;
 }
