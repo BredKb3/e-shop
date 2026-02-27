@@ -125,7 +125,6 @@ body {
     border: none;
     background: none;
     border-radius: 50%;
-    cursor: pointer;
     color: var(--text-secondary);
     text-decoration: none;
     transition: background-color 0.2s;
@@ -170,7 +169,6 @@ body {
     justify-content: center;
     border: none;
     background: none;
-    cursor: pointer;
     border-radius: 50%;
 }
 
@@ -215,14 +213,14 @@ body {
 .mobile-menu__nav {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .mobile-menu__link {
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     padding: 3px 0;
 }
 
