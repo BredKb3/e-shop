@@ -42,12 +42,12 @@ function renderPage() {
     const cartTitle = document.getElementById('cartTitle');
 
     if (cartItems.length === 0) {
-        cartEmpty.classList.remove('hidden');
-        cartContent.classList.add('hidden');
-        cartTitle.classList.add('hidden');
+        cartEmpty.hidden = false;
+        cartContent.hidden = true;
+        cartTitle.hidden = true;
     } else {
-        cartEmpty.classList.add('hidden');
-        cartContent.classList.remove('hidden');
+        cartEmpty.hidden = true;
+        cartContent.hidden = false;
 
         renderCartItems();
         updateSummary();
@@ -194,9 +194,9 @@ function updateSummary() {
     const discountRow = document.getElementById('discountRow');
     if (promoApplied) {
         document.getElementById('discountAmount').textContent = '-$' + discount.toFixed(2);
-        discountRow.classList.remove('hidden');
+        discountRow.classList.remove('hidden')
     } else {
-        discountRow.classList.add('hidden');
+        discountRow.classList.add('hidden')
     }
 }
 
@@ -231,9 +231,9 @@ function setupPromoCode() {
         if (code === PROMO_CODE) {
             promoApplied = true;
             promoInput.disabled = true;
+            promoHint.hidden = true;
             newPromoBtn.disabled = true;
             showPromoMessage('Promo code applied successfully!', true);
-            promoHint.innerHTML = "Неверный промокод";
             updateSummary();
         }
         else{
@@ -245,7 +245,8 @@ function setupPromoCode() {
 function showPromoMessage(text, isSuccess) {
     const msg = document.getElementById('promoMessage');
     msg.textContent = text;
-    msg.classList.remove('hidden', 'promo-message--success', 'promo-message--error');
+    msg.hidden = false;
+    msg.classList.remove('promo-message--success', 'promo-message--error');
     if (isSuccess) {
         msg.classList.add('promo-message--success');
     } else {

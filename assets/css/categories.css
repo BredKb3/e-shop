@@ -6,7 +6,7 @@
 
 .categories-container {
     width: 100%;
-    max-width: 1400rem;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 1.3rem 2rem 4rem;
 }
@@ -59,7 +59,7 @@
 }
 
 .category-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .category-card img {

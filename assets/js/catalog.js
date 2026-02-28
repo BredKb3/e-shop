@@ -185,6 +185,9 @@ function applyFilters() {
         case 'name-asc':
             filtered.sort((a, b) => a.name.localeCompare(b.name));
             break;
+        case 'name-desc':
+            filtered.sort((a, b) => b.name.localeCompare(a.name));
+            break;    
         case 'price-asc':
             filtered.sort((a, b) => a.price - b.price);
             break;
