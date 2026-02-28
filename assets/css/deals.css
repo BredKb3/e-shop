@@ -58,11 +58,11 @@
     color: #ffffff;
     font-size: 1.3rem;
     font-weight: 500;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.6rem;
 }
 
 .deals-banner-left p {
-    color: #bfdbfe;
+    color: #e0effe;
     font-size: 0.95rem;
 }
 
@@ -116,12 +116,11 @@
     z-index: 10;
     background-color: #dc2626;
     color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.70rem;
+    font-weight: 500;
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-    font-family: 'Inter', sans-serif;
 }
 
 .deal-card {
@@ -161,7 +160,7 @@
 }
 
 .deal-card__title {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     font-weight: 550;
     color: #111827;
     margin-bottom: 0.5rem;
@@ -222,7 +221,6 @@
     font-size: 0.7rem;
     color: #9ca3af;
     text-transform: uppercase;
-    font-family: 'Inter', sans-serif;
     letter-spacing: 0.05em;
 }
 
