@@ -229,9 +229,12 @@
     display: flex;
     position: relative;
     gap: 8px;
-    cursor: pointer;
     font-size: 14px;
     align-items: center;
+}
+
+.filter__text{
+    cursor: pointer;
 }
 
 .filter__checkbox {

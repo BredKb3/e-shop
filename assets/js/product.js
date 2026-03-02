@@ -105,7 +105,7 @@ function renderProduct(product) {
         document.getElementById('highlights').style.display = 'none';
     } else {
         highlightsList.innerHTML = highlights.map(([key, val]) => `
-            <li><strong>${key}:</strong> ${val}</li>
+            <li><p class="product__highlights-list-key">${key}:</p>  <p class="product__highlights-list-val">${val}</p></li>
         `).join('');
     }
 

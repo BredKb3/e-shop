@@ -25,7 +25,7 @@
 .about__title {
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
 }
 
 
@@ -43,13 +43,13 @@
     border: 1px solid #e5e7eb;
     border-radius: 9px;
     padding: 32px;
-    margin-bottom: 28px;
+    margin-bottom: 46px;
 }
 
 .about__card-title {
     font-size: 21px;
     font-weight: 500;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .about__text {

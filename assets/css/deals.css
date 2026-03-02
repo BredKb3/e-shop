@@ -105,125 +105,6 @@
     }
 }
 
-.deal-card-wrapper {
-    position: relative;
-}
-
-.deal-badge {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    z-index: 10;
-    background-color: #dc2626;
-    color: #ffffff;
-    font-size: 0.70rem;
-    font-weight: 500;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-}
-
-.deal-card {
-    display: block;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    border: 1px solid #e5e7eb;
-    background-color: #ffffff;
-    text-decoration: none;
-    transition: box-shadow 0.2s ease;
-}
-
-.deal-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.deal-card__image {
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    background-color: #f3f4f6;
-}
-
-.deal-card__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.deal-card:hover .deal-card__image img {
-    transform: scale(1.05);
-}
-
-.deal-card__content {
-    padding: 1rem;
-}
-
-.deal-card__title {
-    font-size: 1.2rem;
-    font-weight: 550;
-    color: #111827;
-    margin-bottom: 0.5rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    line-height: 1.4;
-}
-
-.deal-card__rating {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-bottom: 0.75rem;
-}
-
-.rating-stars {
-    display: flex;
-    align-items: center;
-    gap: 1px;
-}
-
-.rating-stars svg {
-    width: 14px;
-    height: 14px;
-}
-
-.star-full {
-    fill: #facc15;
-    color: #facc15;
-}
-
-.star-empty {
-    fill: #e5e7eb;
-    color: #e5e7eb;
-}
-
-.rating-count {
-    font-size: 0.8rem;
-    color: #6b7280;
-}
-
-.deal-card__footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.deal-card__price {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #2563eb;
-}
-
-.deal-card__category {
-    font-size: 0.7rem;
-    color: #9ca3af;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
 .deals-footer {
     text-align: center;
     margin-top: 1rem;
@@ -231,7 +112,7 @@
 
 .deals-footer p {
     color: #6b7280;
-    font-size: 0.95rem;
+    font-size: 16px;
     margin-bottom: 1rem;
 }
 
@@ -240,9 +121,9 @@
     background-color: #2563eb;
     color: #ffffff;
     font-weight: 600;
-    font-size: 0.95rem;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
+    font-size: 16px;
+    padding: 13px 32px;
+    border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.2s ease;
 }
@@ -250,3 +131,5 @@
 .deals-browse-btn:hover {
     background-color: #1d4ed8;
 }
+
+

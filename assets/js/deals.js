@@ -1,18 +1,30 @@
 const DISCOUNT = 20;
 
 function getRatingStars(rating) {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
     let stars = '';
-    for (let i = 1; i <= 5; i++) {
-        if (i <= Math.floor(rating)) {
-            stars += `<svg class="star-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>
-            </svg>`;
-        } else {
-            stars += `<svg class="star-empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>
-            </svg>`;
-        }
+
+    for (let i = 0; i < fullStars; i++) {
+        stars += `<svg class="rating__star" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>`;
     }
+
+    if (hasHalfStar) {
+        stars += `<svg class="rating__star" viewBox="0 0 24 24">
+            <path d="M12 18.338a2.1 2.1 0 0 0-.987.244L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16l2.309-4.679A.53.53 0 0 1 12 2"></path>
+        </svg>`;
+    }
+
+    for (let i = 0; i < emptyStars; i++) {
+        stars += `<svg class="rating__star empty" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>`;
+    }
+
     return stars;
 }
 
@@ -33,27 +45,31 @@ function renderDeals(products) {
         const imagePath = product.images[0].replace(/\\/g, '/');
 
         return `
-            <div class="deal-card-wrapper">
-                <div class="deal-badge">Save ${DISCOUNT}%</div>
-                <a class="deal-card" href="product.html?id=${product.id}">
-                    <div class="deal-card__image">
-                        <img src="${imagePath}" alt="${product.name}" />
-                    </div>
-                    <div class="deal-card__content">
-                        <h3 class="deal-card__title">${product.name}</h3>
-                        <div class="deal-card__rating">
-                            <div class="rating-stars">
-                                ${getRatingStars(product.rating)}
-                            </div>
-                            <span class="rating-count">(${product.rating})</span>
-                        </div>
-                        <div class="deal-card__footer">
-                            <span class="deal-card__price">$${product.price.toFixed(2)}</span>
-                            <span class="deal-card__category">${product.category}</span>
-                        </div>
-                    </div>
+            <div class="product-card">
+            <div class="product-card__image">
+                <a href="product.html?id=${product.id}">
+                    <img src="${product.images[0]}" alt="${product.name}">
                 </a>
             </div>
+            <div class="product-card__content">
+                <a href="product.html?id=${product.id}">
+                    <h3 class="product-card__title">${product.name}</h3>
+                </a>
+            <div class="product-card__rating">
+                    <div class="rating__stars">
+                        ${getRatingStars(product.rating)}
+                    </div>
+                    <span class="rating__count">(${product.rating})</span>
+                </div>
+                <div class="product-card__footer">
+                    <span class="product-card__price">$${product.price.toFixed(2)}</span>
+                    <span class="product-card__category">${product.category}</span>
+                </div>
+                <div class="product-card__button">
+                <button class="product-card__add-to-cart" id="addToCart" data-product-id="${product.id}" >Add to cart</button>
+                </div>
+            </div>
+        </div>
         `;
     }).join('');
 }

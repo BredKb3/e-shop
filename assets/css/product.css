@@ -245,9 +245,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    font-weight: 400;
     font-size: 14px;
-    color: var(--text-primary);
 }
 
 .product__highlights-list li::before {
@@ -259,6 +257,13 @@
     flex-shrink: 0;
 }
 
+.product__highlights-list-key{
+    font-weight: 550;
+}
+
+.product__highlights-list-val{
+    font-weight: 400;   
+}
 .product__section-title {
     font-size: 20px;
     font-weight: 500;
