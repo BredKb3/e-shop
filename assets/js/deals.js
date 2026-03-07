@@ -38,6 +38,41 @@ fetch('data/products.json')
     .catch(err => console.error('Ошибка загрузки products.json:', err));
 
 
+function setupAddToCartButtons() {
+    const buttons = document.querySelectorAll('.product-card__add-to-cart');
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productId = this.getAttribute('data-product-id');
+            addToCart(Number(productId), 1);
+        });
+    });
+}
+
+
+
+window.addToCart = function(productId, quantity = 1) {
+    let cart = localStorage.getItem('cart');
+    cart = cart ? JSON.parse(cart) : [];
+    let found = false;
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].id === productId) {
+            cart[i].quantity += quantity;
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        cart.push({
+            id: productId,
+            quantity: quantity
+        });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.dispatchEvent(new Event('cartUpdated'));
+}
+
+
 function renderDeals(products) {
     const grid = document.getElementById('deals-grid');
 
@@ -72,4 +107,5 @@ function renderDeals(products) {
         </div>
         `;
     }).join('');
+    setupAddToCartButtons();
 }
