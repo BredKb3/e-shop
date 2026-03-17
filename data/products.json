@@ -7,7 +7,7 @@
       "rating": 3.5,
       "reviews": 327,
       "category": "Audio",
-      "images": ["images\\1.jpg", "images\\1.jpg", "images\\1.jpg"],
+      "images": ["images\\1.jpg", "images\\2.jpg", "images\\3.jpg"],
       "description": "Take your music anywhere with this powerful portable speaker. Delivers rich, immersive sound with deep bass. Waterproof design perfect for outdoor adventures and pool parties.",
       "specifications": {
         "Output Power": "20W",
