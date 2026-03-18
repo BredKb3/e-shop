@@ -188,7 +188,6 @@
 }
 
 .rating__star.empty {
-    fill: none;
     color: #d1d5db;
 }
 
@@ -313,7 +312,12 @@
     align-items: center;
     justify-content: center;
     color: var(--text-primary);
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.05s ease;
+    cursor: pointer;
+}
+
+.product__qty-btn:active{
+    transform: scale(0.9);
 }
 
 .product__qty-btn:hover {
@@ -341,7 +345,12 @@
     font-size: 15px;
     font-weight: 600;
     height: 56px;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.07s ease;
+    cursor: pointer;
+}
+
+.product__add-to-cart:active{
+    transform: scale(0.97);
 }
 
 .product__add-to-cart:hover {
@@ -367,6 +376,7 @@
     font-weight: 500;
     color: var(--text-primary);
     text-align: left;
+    cursor: pointer;
 }
 
 .product__accordion-btn:hover {

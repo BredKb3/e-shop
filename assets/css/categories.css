@@ -61,11 +61,15 @@
     text-decoration: none;
     display: block;
     cursor: pointer;
-    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.03s ease;
 }
 
 .category-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-card:active{
+    transform: scale(0.96);
 }
 
 .category-card img {
@@ -88,6 +92,8 @@
     align-items: flex-end;
     padding: 1.5rem;
 }
+
+
 
 .category-card-text h3 {
     color: #ffffff;

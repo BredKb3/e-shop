@@ -156,12 +156,16 @@ html, body {
     justify-content: center;
     color: var(--text-secondary);
     flex-shrink: 0;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, transform 0.05s ease;
 }
 
 .cart-item__remove:hover {
     background-color: #fef2f2;
     color: var(--red);
+}
+
+.cart-item__remove:active{
+    transform: scale(0.9);
 }
 
 .cart-item__footer {
@@ -186,7 +190,7 @@ html, body {
     align-items: center;
     justify-content: center;
     color: var(--text-primary);
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.05s ease;
     cursor: pointer;
 }
 
@@ -197,6 +201,10 @@ html, body {
 .quantity-btn:disabled {
     opacity: 0.4;
     cursor: not-allowed;
+}
+
+.quantity-btn:active{
+    transform: scale(0.9);
 }
 
 .quantity-value {
@@ -344,11 +352,16 @@ html, body {
     font-size: 0.875rem;
     font-weight: 600;
     white-space: nowrap;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.05s ease;
+    cursor: pointer;
 }
 
 .btn-apply:hover {
     background-color: #111827;
+}
+
+.btn-apply:active{
+    transform: scale(0.95);
 }
 
 .btn-apply:disabled{
@@ -384,10 +397,16 @@ html, body {
     font-size: 1rem;
     font-weight: 600;
     transition: background-color 0.2s;
+    cursor: pointer;
+    transition: transform 0.04s ease;
 }
 
 .btn-checkout:hover {
     background-color: var(--primary-dark);
+}
+
+.btn-checkout:active{
+    transform: scale(0.97);
 }
 
 .btn-primary {
@@ -401,11 +420,15 @@ html, body {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.05s ease;
 }
 
 .btn-primary:hover {
     background-color: var(--primary-dark);
+}
+
+.btn-primary:active{
+    transform: scale(0.95);
 }
 
 .btn-primary--full {

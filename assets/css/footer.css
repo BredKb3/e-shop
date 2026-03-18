@@ -76,7 +76,11 @@
     align-items: center;
     justify-content: center;
     color: #4d4f54;
-    transition: all 0.2s;
+    transition: all 0.2s, transform 0.05s;
+}
+
+.social__link:active{
+    transform: scale(0.9);
 }
 
 .social__link:hover {
@@ -162,11 +166,16 @@
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.05s ease;
+}
+
+.footer__button:active{
+    transform: scale(0.95);
 }
 
 .footer__button:hover {
     background-color: #1d4ed8;
+    cursor: pointer;
 }
 
 .footer__bottom {

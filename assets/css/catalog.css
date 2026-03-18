@@ -51,7 +51,11 @@
     background: white;
     border-radius: 10px;
     font-size: 14px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.01s ease;
+}
+
+.catalog__filter-btn:active{
+    transform: scale(0.95);
 }
 
 @media (min-width: 1024px) {
@@ -335,10 +339,16 @@
     font-weight: 500;
     color: #000000;
     transition: all 0.2s;
+    cursor: pointer;
+    transition: transform 0.05s ease;
 }
 
 .filter__clear:hover {
     background: #f9fafb;
+}
+
+.filter__clear:active{
+    transform: scale(0.95);
 }
 
 .catalog__grid {
@@ -369,6 +379,7 @@
     text-decoration: none;
     color: inherit;
     display: block;
+    transition: transform 0.05s ease;
 }
 
 .product-card:hover {
@@ -472,6 +483,12 @@
     font-weight: 600;
     border: solid 1px #FFFFFF;
     border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.05s ease;
+}
+
+.product-card__add-to-cart:active{
+    transform: scale(0.93);
 }
 
 .product-card__category {
