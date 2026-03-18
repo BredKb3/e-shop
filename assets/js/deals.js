@@ -77,8 +77,6 @@ function renderDeals(products) {
     const grid = document.getElementById('deals-grid');
 
     grid.innerHTML = products.map(product => {
-        const imagePath = product.images[0].replace(/\\/g, '/');
-
         return `
             <div class="product-card">
             <div class="product-card__image">
