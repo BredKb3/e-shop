@@ -236,6 +236,9 @@ function setupPromoCode() {
             showPromoMessage('Promo code applied successfully!', true);
             updateSummary();
         }
+        else if (code === ""){
+            showPromoMessage("", false)
+        }
         else{
             showPromoMessage("Неверный промокод", false);
         }
@@ -249,7 +252,11 @@ function showPromoMessage(text, isSuccess) {
     msg.classList.remove('promo-message--success', 'promo-message--error');
     if (isSuccess) {
         msg.classList.add('promo-message--success');
-    } else {
+    }
+    else if (text === ""){
+        msg.classList.remove('promo-message--error');
+    } 
+    else {
         msg.classList.add('promo-message--error');
     }
 }
