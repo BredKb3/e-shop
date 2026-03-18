@@ -31,8 +31,7 @@ function getRatingStars(rating) {
 fetch('data/products.json')
     .then(response => response.json())
     .then(data => {
-        const DEAL_IDS = [2, 4, 5, 3];
-        const dealProducts = DEAL_IDS.map(id => data.products.find(p => p.id === id)).filter(Boolean);
+        const dealProducts = data.products.filter(p => p.onSale === true);
         renderDeals(dealProducts);
     })
     .catch(err => console.error('Ошибка загрузки products.json:', err));

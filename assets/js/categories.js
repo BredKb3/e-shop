@@ -1,10 +1,10 @@
-const categoriesData = [
-    { name: 'Audio',       image: 'images/2.jpg', count: 2 },
-    { name: 'Computers',   image: 'images/4.jpg', count: 1 },
-    { name: 'Wearables',   image: 'images/5.jpg', count: 1 },
-    { name: 'Photography', image: 'images/3.jpg', count: 1 },
-    { name: 'Tablets',     image: 'images/6.jpg', count: 1 }
-];
+const categoryImages = {
+    'Audio':       'images/2.jpg',
+    'Computers':   'images/4.jpg',
+    'Wearables':   'images/5.jpg',
+    'Photography': 'images/3.jpg',
+    'Tablets':     'images/6.jpg'
+};
 
 function renderCategories(categories) {
     const grid = document.getElementById('categories-grid');
@@ -14,7 +14,7 @@ function renderCategories(categories) {
 
         const card = document.createElement('a');
         card.classList.add('category-card');
-        card.href = `index.html`;
+        card.href = `catalog.html?category=${encodeURIComponent(cat.name)}`;
 
         card.innerHTML = `
             <img src="${cat.image}" alt="${cat.name}" />
@@ -30,4 +30,20 @@ function renderCategories(categories) {
     });
 }
 
-renderCategories(categoriesData);
+fetch('data/products.json')
+    .then(response => response.json())
+    .then(data => {
+        const countMap = {};
+        data.products.forEach(p => {
+            countMap[p.category] = (countMap[p.category] || 0) + 1;
+        });
+
+        const categories = Object.entries(countMap).map(([name, count]) => ({
+            name,
+            count,
+            image: categoryImages[name] || 'images/default.jpg'
+        }));
+
+        renderCategories(categories);
+    })
+    .catch(err => console.error('Ошибка загрузки products.json:', err));
