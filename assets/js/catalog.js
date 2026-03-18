@@ -18,16 +18,25 @@ const sliderTrackDrawer = document.getElementById('priceRangeSliderDrawer');
 let allProducts = [];
 let filteredProducts = [];
 
+let MAX_PRICE_LIMIT = 0;
+
 let currentFilters = {
     rating: [],
     minPrice: 0,
-    maxPrice: 3000,
+    maxPrice: MAX_PRICE_LIMIT,
     sort: 'name-asc'
 };
 
+function getMaxPrice(products) {
+    if (!products || products.length === 0) return 0;
+    
+    const prices = products.map(product => product.price);
+    return Math.max(...prices);
+}
+
 function syncUIFromFilters() {
     const { minPrice: min, maxPrice: max, rating } = currentFilters;
-
+    
     minRange.value = min;
     maxRange.value = max;
     minRangeDrawer.value = min;
@@ -38,8 +47,8 @@ function syncUIFromFilters() {
     minPriceDrawer.textContent = min;
     maxPriceDrawer.textContent = max;
 
-    const percentMin = (min / 3000) * 100;
-    const percentMax = (max / 3000) * 100;
+    const percentMin = (min / MAX_PRICE_LIMIT) * 100;
+    const percentMax = (max / MAX_PRICE_LIMIT) * 100;
     const fillStyle = `left:${percentMin}%; width:${percentMax - percentMin}%`;
     priceFill.style.cssText = fillStyle;
     priceFillDrawer.style.cssText = fillStyle;
@@ -55,9 +64,17 @@ async function loadProducts() {
         const data = await response.json();
         allProducts = data.products;
         filteredProducts = [...allProducts];
-
+        
+        const rawMax = getMaxPrice(allProducts);
+        MAX_PRICE_LIMIT = Math.ceil(rawMax / 50) * 50;
+        
+        [minRange, maxRange, minRangeDrawer, maxRangeDrawer].forEach(input => {
+            input.max = MAX_PRICE_LIMIT;
+        });
+        
+        currentFilters.maxPrice = MAX_PRICE_LIMIT;
+        
         syncUIFromFilters();
-
         displayProducts();
         updateProductCount();
     } catch (error) {
@@ -299,7 +316,7 @@ window.clearAllFilters = function () {
     currentFilters = {
         rating: [],
         minPrice: 0,
-        maxPrice: 3000,
+        maxPrice: MAX_PRICE_LIMIT,
         sort: 'name-asc'
     };
 
@@ -321,7 +338,7 @@ document.addEventListener('mousedown', () => { wasDragging = false; });
 function getSnappedTrackValue(e, trackEl) {
     const rect = trackEl.getBoundingClientRect();
     const percent = ((e.clientX - rect.left) / rect.width) * 100;
-    const raw = (percent / 100) * 3000;
+    const raw = (percent / 100) * MAX_PRICE_LIMIT;
     return Math.round(raw / 10) * 10;
 }
 
