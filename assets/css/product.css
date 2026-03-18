@@ -1,6 +1,6 @@
 .product-page {
     background-color: var(--bg-gray);
-    min-height: 100vh;
+    min-height: 100%;
     padding: 32px 0 64px;
 }
 

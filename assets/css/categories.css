@@ -1,6 +1,6 @@
 .categories-main {
     background-color: #f9fafb;
-    min-height: calc(100vh - 140px);
+    max-height: 100%;
     padding: 0.5rem 0 4rem;
 }
 
@@ -41,6 +41,12 @@
 @media (max-width: 640px) {
     .categories-grid {
         grid-template-columns: 1fr;
+    }
+    .categories-main {
+    padding: 0.5rem 0;
+    }
+    .categories-container {
+    padding: 1.3rem 2rem;
     }
 }
 

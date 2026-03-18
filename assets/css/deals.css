@@ -1,6 +1,6 @@
 .deals-main {
     background-color: #f9fafb;
-    min-height: calc(100vh - 140px);
+    min-height: 100%;
     padding: 0;
 }
 
@@ -102,6 +102,9 @@
 @media (max-width: 480px) {
     .deals-grid {
         grid-template-columns: 1fr;
+    }
+    .deals-container {
+    padding: 2rem 1rem 2rem;
     }
 }
 

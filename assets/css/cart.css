@@ -10,12 +10,17 @@
     --red: #dc2626;
 }
 
+html, body {
+    max-height: 100%;
+}
+
 .hidden {
     display: none !important;
 }
 
 .cart-page {
-    min-height: calc(100vh - 64px);
+    min-height: 100%;
+    box-sizing: border-box;
     background-color: var(--bg-gray);
     padding: 32px 16px;
 }
@@ -224,8 +229,9 @@
     position: sticky;
     top: 80px;
     align-self: start;
-    max-height: calc(100vh - 96px);
-    /* overflow-y: auto; */
+    max-height: 100%;
+    overflow-y: auto;
+
 }
 
 .summary-card {
