@@ -77,31 +77,32 @@ function renderDeals(products) {
 
     grid.innerHTML = products.map(product => {
         return `
-            <div class="product-card">
-            <div class="product-card__image">
-                <a href="product.html?id=${product.id}">
-                    <img src="${product.images[0]}" alt="${product.name}">
-                </a>
-            </div>
-            <div class="product-card__content">
-                <a href="product.html?id=${product.id}">
-                    <h3 class="product-card__title">${product.name}</h3>
-                </a>
-            <div class="product-card__rating">
-                    <div class="rating__stars">
-                        ${getRatingStars(product.rating)}
+            <div class="product-card" style="position: relative;">
+                <span class="product-card__badge">Save ${DISCOUNT}%</span>
+                <div class="product-card__image">
+                    <a href="product.html?id=${product.id}">
+                        <img src="${product.images[0]}" alt="${product.name}">
+                    </a>
+                </div>
+                <div class="product-card__content">
+                    <a href="product.html?id=${product.id}">
+                        <h3 class="product-card__title">${product.name}</h3>
+                    </a>
+                    <div class="product-card__rating">
+                        <div class="rating__stars">
+                            ${getRatingStars(product.rating)}
+                        </div>
+                        <span class="rating__count">(${product.rating})</span>
                     </div>
-                    <span class="rating__count">(${product.rating})</span>
-                </div>
-                <div class="product-card__footer">
-                    <span class="product-card__price">$${product.price.toFixed(2)}</span>
-                    <span class="product-card__category">${product.category}</span>
-                </div>
-                <div class="product-card__button">
-                <button class="product-card__add-to-cart" id="addToCart" data-product-id="${product.id}" >Add to cart</button>
+                    <div class="product-card__footer">
+                        <span class="product-card__price">$${product.price.toFixed(2)}</span>
+                        <span class="product-card__category">${product.category}</span>
+                    </div>
+                    <div class="product-card__button">
+                        <button class="product-card__add-to-cart" data-product-id="${product.id}">Add to cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
         `;
     }).join('');
     setupAddToCartButtons();
