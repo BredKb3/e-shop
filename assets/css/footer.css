@@ -1,6 +1,10 @@
 .footer {
     background-color: var(--bg-gray);
+<<<<<<< HEAD
     border-top: 1px solid var(--border);
+=======
+    border-top: 1px solid #e5e7eb;
+>>>>>>> 6e7da65a241c236c3ab506106d7ae1a76b205965
 }
 
 .footer__container {
@@ -52,7 +56,10 @@
 .footer__logo-text {
     font-weight: bold;
     font-size: 20px;
+<<<<<<< HEAD
     color: var(--text-primary);
+=======
+>>>>>>> 6e7da65a241c236c3ab506106d7ae1a76b205965
 }
 
 .footer__about {
@@ -85,11 +92,18 @@
 
 .social__link:hover {
     background-color: var(--primary);
+<<<<<<< HEAD
     color: var(--bg-white);
 }
 
 .footer__title {
     color: var(--text-primary);
+=======
+    color: white;
+}
+
+.footer__title {
+>>>>>>> 6e7da65a241c236c3ab506106d7ae1a76b205965
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -118,7 +132,11 @@
 .footer__contact {
     margin-top: 20px;
     font-size: 14px;
+<<<<<<< HEAD
     color: var(--subtext);
+=======
+    color: var(--text-secondary);
+>>>>>>> 6e7da65a241c236c3ab506106d7ae1a76b205965
 }
 
 .footer__phone {
@@ -159,7 +177,11 @@
 
 .footer__button {
     background-color: var(--primary);
+<<<<<<< HEAD
     color: var(--bg-white);
+=======
+    color: white;
+>>>>>>> 6e7da65a241c236c3ab506106d7ae1a76b205965
     border: none;
     padding: 8px 16px;
     border-radius: 8px;
@@ -174,7 +196,11 @@
 }
 
 .footer__button:hover {
+<<<<<<< HEAD
     background-color: var(--primary-dark);
+=======
+    background-color: var(--primary);
+>>>>>>> 6e7da65a241c236c3ab506106d7ae1a76b205965
     cursor: pointer;
 }
 

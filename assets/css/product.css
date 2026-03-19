@@ -189,6 +189,10 @@
 
 .rating__star.empty {
     color: var(--star-empty);
+<<<<<<< HEAD
+=======
+    stroke: var(--star-empty);
+>>>>>>> 6e7da65a241c236c3ab506106d7ae1a76b205965
 }
 
 .rating__count {
