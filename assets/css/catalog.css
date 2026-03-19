@@ -23,14 +23,13 @@
 .catalog__title {
     font-size: 25px;
     font-weight: 550;
-    color: #000000;
     margin-bottom: 8px;
 }
 
 .catalog__subtitle {
     font-size: 16px;
     font-weight: 400;
-    color: #5a5d65;
+    color: var(--text-secondary);
 }
 
 .catalog__controls {
@@ -47,7 +46,7 @@
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    border: 1px solid #cbccce;
+    border: 1px solid var(--border);
     background: white;
     border-radius: 10px;
     font-size: 14px;
@@ -65,7 +64,7 @@
 }
 
 .catalog__filter-btn:hover {
-    background-color: #f9fafb;
+    background-color: var(--bg-gray);
 }
 
 .catalog__count {
@@ -82,7 +81,7 @@
 
 .sort__label {
     font-size: 14px;
-    color:#63676f;
+    color:var(--text-secondary);
 }
 
 .dropdown {
@@ -94,13 +93,12 @@
     width: 100%;
     padding: 8px 12px;
     background: white;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    color: #000000;
     font-weight: 500;
     border-color: #FFFFFF;
 }
@@ -109,7 +107,7 @@
     position: absolute;
     margin-top: 4px;
     background: white;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border);
     border-radius: 8px;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
     z-index: 100;
@@ -133,7 +131,6 @@
     border: none;
     text-align: left;
     font-size: 14px;
-    color: #000000;
     position: relative;
 }
 
@@ -190,7 +187,7 @@
 
 .sidebar__inner {
     background: white;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 26px;
     position: sticky;
@@ -251,9 +248,9 @@
     width: 16px;
     height: 15px;
     cursor: default;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--border);
     border-radius: 4px;
-    background: #eff0f1;
+    background: var(--bg-gray);
     box-shadow: 0px 0px 2px 0px rgba(34, 60, 80, 0.2);
 }
 
@@ -288,7 +285,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #e5e7eb;
+    background: var(--bg-gray);
     border-radius: 16px;
 }
 
@@ -326,14 +323,14 @@
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    color: #6b7280;
+    color: var(--text-secondary);
     margin-top: 8px;
 }
 
 .filter__clear {
     padding: 8px;
     background: none;
-    border: 1px solid #cfd0d2;
+    border: 1px solid var(--border);
     border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
@@ -344,7 +341,7 @@
 }
 
 .filter__clear:hover {
-    background: #f9fafb;
+    background: var(--bg-gray);
 }
 
 .filter__clear:active{
@@ -372,7 +369,7 @@
 
 .product-card {
     background: white;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.2s;
@@ -413,7 +410,7 @@
 .product-card__title {
     font-size: 18px;
     font-weight: 500;
-    color: #1f2937;
+    color: #000000;
     margin-bottom: 8px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -436,19 +433,19 @@
 .rating__star {
     width: 16px;
     height: 16px;
-    stroke: #fbbf24;
+    stroke: var(--star);
     stroke-width: 1.5;
-    fill: #fbbf24;
+    fill: var(--star);
 }
 
 .rating__star.empty{
-    fill: #e5e6e7;
-    stroke:#e5e6e7 ;
+    fill: var(--star-empty);
+    stroke: var(--star-empty);
 }
 
 .rating__count {
     font-size: 13px;
-    color: #454444;
+    color: var(--text-secondary);
 }
 
 .rating__star path {
@@ -465,7 +462,7 @@
 .product-card__price {
     font-size: 18px;
     font-weight: 700;
-    color: #2563eb;
+    color: var(--primary);
 }
 
 .product-card__button{
@@ -478,7 +475,7 @@
     display: flex;
     padding: 4px;
     font-size: 16px;
-    background: #2563eb;
+    background: var(--primary);
     color: #FFFFFF;
     font-weight: 600;
     border: solid 1px #FFFFFF;
@@ -494,7 +491,7 @@
 .product-card__category {
     font-size: 12px;
     text-transform: uppercase;
-    color: #67696c;
+    color: var(--text-secondary);
 }
 
 .filter-overlay {
@@ -554,7 +551,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6b7280;
+    color: var(--text-secondary);
 }
 
 .filter-drawer__close:hover {
@@ -580,7 +577,7 @@
     flex-direction: column;
     padding: 80px 16px;
     text-align: center;
-    color: #4b5563;
+    color: var(--text-secondary);
 }
 
 .catalog__empty-title {

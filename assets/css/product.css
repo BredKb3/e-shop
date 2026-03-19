@@ -183,12 +183,13 @@
 .rating__star {
     width: 20px;
     height: 20px;
-    fill: #facc15;
-    color: #facc15;
+    fill: var(--star);
+    color: var(--star);
 }
 
 .rating__star.empty {
-    color: #d1d5db;
+    color: var(--star-empty);
+    stroke: var(--star-empty);
 }
 
 .rating__count {
@@ -217,7 +218,7 @@
 
 .product__shipping {
     font-size: 14px;
-    color: #6a6a6e;
+    color: var(--subtext);
 }
 
 .product__highlights {
