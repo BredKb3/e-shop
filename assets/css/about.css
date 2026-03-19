@@ -1,5 +1,5 @@
 .about {
-    background-color: #f9fafb;
+    background-color: var(--bg-gray);
     min-height: 100%;
     padding: 2px 0;
     padding-top: 34px;
@@ -31,7 +31,7 @@
 
 .about__subtitle {
     font-size: 18px;
-    color: #484b51;
+    color: var(--text-secondary);
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -39,8 +39,8 @@
 }
 
 .about__card {
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border);
     border-radius: 9px;
     padding: 32px;
     margin-bottom: 46px;
@@ -53,7 +53,7 @@
 }
 
 .about__text {
-    color: #3a3b3d;
+    color: var(--text-secondary);
     line-height: 1.5;
     font-size: 16px;
 }
@@ -88,8 +88,8 @@
 }
 
 .value__card {
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 24px;
     text-align: center;
@@ -105,7 +105,7 @@
 .value__icon .value__emoji {
     width: 48px;
     height: 48px;
-    background-color: #dbeafe;
+    background-color: var(--border);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -121,7 +121,7 @@
 
 .value__text {
     font-size: 14px;
-    color: #4e5055;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
@@ -151,7 +151,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #2563eb;
+    color: var(--primary);
     flex-shrink: 0;
 }
 
@@ -172,7 +172,7 @@
 
 .contact__text {
     font-size: 14px;
-    color: #4e5055;
+    color: var(--text-secondary);
     line-height: 1.5;
     margin-bottom: 2px;
 }
