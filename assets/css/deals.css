@@ -1,5 +1,5 @@
 .deals-main {
-    background-color: #f9fafb;
+    background-color: var(--bg-gray);
     min-height: 100%;
     padding: 0;
 }
@@ -23,7 +23,7 @@
 }
 
 .deals-icon {
-    color: #2563eb;
+    color: var(--primary);
     width: 24px;
     height: 24px;
     flex-shrink: 0;
@@ -32,12 +32,11 @@
 .deals-header h1 {
     font-size: 1.5rem;
     font-weight: 550;
-    color: #111827;
     margin: 0;
 }
 
 .deals-subtitle {
-    color: #6b7280;
+    color: var(--subtext);
     font-size: 0.95rem;
     margin: 0;
 }
@@ -55,14 +54,14 @@
 }
 
 .deals-banner-left h2 {
-    color: #ffffff;
+    color: var(--bg-white);
     font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 0.6rem;
 }
 
 .deals-banner-left p {
-    color: #e0effe;
+    color: var(--bg-white);
     font-size: 0.95rem;
 }
 
@@ -74,7 +73,7 @@
     backdrop-filter: blur(4px);
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    color: #ffffff;
+    color: var(--bg-white);
     font-weight: 600;
     font-size: 0.95rem;
     white-space: nowrap;
@@ -114,7 +113,7 @@
 }
 
 .deals-footer p {
-    color: #6b7280;
+    color: var(--subtext);
     font-size: 16px;
     margin-bottom: 1rem;
 }
@@ -122,7 +121,7 @@
 .deals-browse-btn {
     display: inline-block;
     background-color: #2563eb;
-    color: #ffffff;
+    color: var(--bg-white);
     font-weight: 600;
     font-size: 16px;
     padding: 13px 32px;
@@ -136,7 +135,7 @@
 }
 
 .deals-browse-btn:hover {
-    background-color: #1d4ed8;
+    background-color: var(--primary-dark);
 }
 
 .product-card__badge {
@@ -144,8 +143,8 @@
     top: -10px;
     right: -10px;
     z-index: 10;
-    background-color: #e60000;
-    color: #ffffff;
+    background-color: #e60000; 
+    color: var(--bg-white);
     font-size: 0.75rem;
     font-weight: 600;
     padding: 4px 12px;
